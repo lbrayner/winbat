@@ -1,7 +1,7 @@
 @echo off
 
-set emacs_home=C:\Users\leona\usr\emacs-w64-25.1-O2-with-modules\emacs
-set emacs=emacs-25.1
+set emacs_home=C:\Users\leona\usr\emacs-26.1-x86_64
+set emacs=emacs.exe
 
 if "%1"=="" goto nofile
 
