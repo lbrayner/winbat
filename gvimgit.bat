@@ -8,9 +8,12 @@ set "tmp=%temp%"
 set shell=
 set term=msys
 set cygpath=c:\cygwin64\bin\cygpath.exe
+set arg=
 
-for /f %%i in ('%cygpath% -w %1') do set arg=%%i
+FOR /F "tokens=* USEBACKQ" %%i in (`%cygpath% -w %1`) do set "arg=%arg%%%i"
 
-start /wait /max "" "%app_home%\%app%" %arg%
+echo %arg%
+
+start /wait /max "" "%app_home%\%app%" "%arg%"
 
 exit /b 0

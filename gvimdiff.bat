@@ -10,6 +10,6 @@ set shell=c:\cygwin64\bin\bash.exe
 set "local=%1"
 set "remote=%2"
 
-start /wait /max "" "%app_home%\%app%" -d -R "%local%" "%remote%"
+start /wait /max "" "%app_home%\%app%" -d -R %local% %remote%
 
 exit /b 0
