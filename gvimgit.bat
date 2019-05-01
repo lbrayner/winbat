@@ -12,8 +12,6 @@ set arg=
 
 FOR /F "tokens=* USEBACKQ" %%i in (`%cygpath% -w %1`) do set "arg=%arg%%%i"
 
-echo %arg%
-
 start /wait /max "" "%app_home%\%app%" "%arg%"
 
 exit /b 0
